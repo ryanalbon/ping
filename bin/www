@@ -3,8 +3,10 @@
 const express = require('express');
 const http = require('http');
 
+const { version } = require('../package.json');
+
 const app = express();
 
-app.get('/ping', (req, res) => res.status(200).json({ message: 'Pong!' }).end());
+app.get('/ping', (req, res) => res.status(200).set('X-Ping-Version', `v${version}`).json({ message: 'Pong!' }).end());
 
 http.createServer(app).listen('8080', '0.0.0.0');
