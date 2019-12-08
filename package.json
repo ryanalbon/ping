@@ -1,0 +1,9 @@
+{
+  "name": "ping",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Ryan Albon <ryanalbon@gmail.com>",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
